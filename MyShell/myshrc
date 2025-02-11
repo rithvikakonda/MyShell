@@ -1,0 +1,31 @@
+# Aliases
+
+reveall= reveal -l
+
+alias reveala= reveal -a 
+
+alias home= hop ~
+
+alias parentdirec= hop ..
+
+# Functions (BONUS)
+
+mk_hop() {
+    mkdir "$1"  # Create the directory with the name passed as argument
+    hop "$1"    # Change into the directory using the 'hop' command
+}
+
+hop_seek() {
+    hop "$1"  # Change into the directory specified
+    seek "$1" # Search for files or directories with the same name in the current directory
+}
+
+func mk_hop() {
+    mkdir "$1"  # Create the directory
+    hop "$1"    # Change into the directory
+}
+
+func hop_seek() {
+    hop "$1"  # Hop into the directory
+    seek "$1" # Search for matching files or directories
+}
